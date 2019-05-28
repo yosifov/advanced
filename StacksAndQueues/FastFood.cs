@@ -21,8 +21,7 @@
             var orders = new Queue<int>(input);
             sb.AppendLine(orders.Max().ToString());
 
-            int totalOrders = orders.Count;
-            for (int i = 0; i < totalOrders; i++)
+            while (orders.Any())
             {
                 quantity -= orders.Peek();
                 if (quantity >= 0)
@@ -31,13 +30,14 @@
                 }
                 else
                 {
-                    sb.Append($"Orders left: {string.Join(", ", orders)}");
+                    sb.AppendLine($"Orders left: {string.Join(" ", orders)}");
                     break;
                 }
             }
+            
             if (orders.Count == 0)
             {
-                sb.Append("Orders complete");
+                sb.AppendLine("Orders complete");
             }
 
             Console.WriteLine(sb);
