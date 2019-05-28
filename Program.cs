@@ -8,7 +8,8 @@
         {
             //StacksAndQueues.BasicStackOperations.Execute();
             //StacksAndQueues.BasicQueueOperations.Execute();
-            StacksAndQueues.MaximumAndMinimumElement.Execute();
+            //StacksAndQueues.MaximumAndMinimumElement.Execute();
+            StacksAndQueues.FastFood.Execute();
         }
     }
 }
