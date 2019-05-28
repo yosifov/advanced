@@ -3,8 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
-    class BasicStackOperations
+    class BasicQueueOperations
     {
         public static void Execute()
         {
@@ -13,7 +14,7 @@
                 .Select(int.Parse)
                 .ToArray();
 
-            int elementsToPop = input[1];
+            int maxElementsToDequeue = input[1];
             int searchElement = input[2];
 
             var elements = Console.ReadLine()
@@ -21,24 +22,24 @@
                 .Select(int.Parse)
                 .ToArray();
 
-            var stack = new Stack<int>(elements);
+            var queue = new Queue<int>(elements);
 
-            int maxPops = Math.Min(stack.Count, elementsToPop);
+            int elementsToDequeue = Math.Min(queue.Count, maxElementsToDequeue);
 
-            for (int i = 1; i <= maxPops; i++)
+            for (int i = 1; i <= elementsToDequeue; i++)
             {
-                stack.Pop();
+                queue.Dequeue();
             }
 
-            if (stack.Contains(searchElement))
+            if (queue.Contains(searchElement))
             {
                 Console.WriteLine("true");
             }
             else
             {
-                if (stack.Count > 0)
+                if (queue.Count > 0)
                 {
-                    Console.WriteLine(stack.Min());
+                    Console.WriteLine(queue.Min());
                 }
                 else
                 {

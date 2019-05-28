@@ -6,7 +6,8 @@
     {
         static void Main(string[] args)
         {
-            StacksAndQueues.BasicStackOperations.Execute();
+            //StacksAndQueues.BasicStackOperations.Execute();
+            StacksAndQueues.BasicQueueOperations.Execute();
         }
     }
 }
