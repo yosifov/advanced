@@ -14,7 +14,6 @@
                 .ToArray();
 
             var clothesInBox = new Stack<int>(input);
-            int boxesCount = clothesInBox.Count;
             int rackCapacity = int.Parse(Console.ReadLine());
             int rackCount = 1;
 
