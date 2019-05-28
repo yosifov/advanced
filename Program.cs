@@ -9,7 +9,8 @@
             //StacksAndQueues.BasicStackOperations.Execute();
             //StacksAndQueues.BasicQueueOperations.Execute();
             //StacksAndQueues.MaximumAndMinimumElement.Execute();
-            StacksAndQueues.FastFood.Execute();
+            //StacksAndQueues.FastFood.Execute();
+            StacksAndQueues.FashionBoutique.Execute();
         }
     }
 }
