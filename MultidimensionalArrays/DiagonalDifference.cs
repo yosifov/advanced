@@ -1,4 +1,4 @@
-﻿namespace Advanced.MultidemensionalArrays
+﻿namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
