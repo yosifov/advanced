@@ -14,7 +14,9 @@
             //StacksAndQueues.AutoRepairAndService.Execute();
             //StacksAndQueues.TruckTour.Execute();
             //MultidemensionalArrays.DiagonalDifference.Execute();
-            MultidemensionalArrays.TwoByTwoSquaresInMatrix.Execute();
+            //MultidemensionalArrays.TwoByTwoSquaresInMatrix.Execute();
+            MultidemensionalArrays.MaximalSum.Execute();
+
         }
     }
 }
