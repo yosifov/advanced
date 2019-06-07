@@ -13,7 +13,8 @@
             //StacksAndQueues.FashionBoutique.Execute();
             //StacksAndQueues.AutoRepairAndService.Execute();
             //StacksAndQueues.TruckTour.Execute();
-            MultidemensionalArrays.DiagonalDifference.Execute();
+            //MultidemensionalArrays.DiagonalDifference.Execute();
+            MultidemensionalArrays.TwoByTwoSquaresInMatrix.Execute();
         }
     }
 }
