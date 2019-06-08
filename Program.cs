@@ -15,7 +15,8 @@
             //StacksAndQueues.TruckTour.Execute();
             //MultidimensionalArrays.DiagonalDifference.Execute();
             //MultidimensionalArrays.TwoByTwoSquaresInMatrix.Execute();
-            MultidimensionalArrays.MaximalSum.Execute();
+            //MultidimensionalArrays.MaximalSum.Execute();
+            MultidimensionalArrays.MatrixShuffling.Execute();
 
         }
     }
