@@ -17,7 +17,8 @@
             //MultidimensionalArrays.TwoByTwoSquaresInMatrix.Execute();
             //MultidimensionalArrays.MaximalSum.Execute();
             //MultidimensionalArrays.MatrixShuffling.Execute();
-            MultidimensionalArrays.SnakeMoves.Execute();
+            //MultidimensionalArrays.SnakeMoves.Execute();
+            MultidimensionalArrays.BombTheBasement.Execute();
         }
     }
 }
