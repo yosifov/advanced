@@ -18,7 +18,8 @@
             //MultidimensionalArrays.MaximalSum.Execute();
             //MultidimensionalArrays.MatrixShuffling.Execute();
             //MultidimensionalArrays.SnakeMoves.Execute();
-            MultidimensionalArrays.BombTheBasement.Execute();
+            //MultidimensionalArrays.BombTheBasement.Execute();
+            MultidimensionalArrays.KnightGame.Execute();
         }
     }
 }
