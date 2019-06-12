@@ -1,9 +1,7 @@
 ﻿namespace Advanced.MultidimensionalArrays
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
     class Miner
     {
@@ -68,27 +66,21 @@
                         break;
                 }
 
-                GetDirection(fieldSize, ref rowDirection, ref colDirection, currentRow, currentCol);
+                GetCurrentPosition(fieldSize, ref rowDirection, ref colDirection, ref currentRow, ref currentCol);
 
-                if (rowDirection == 0 || colDirection == 0)
+                switch (field[currentRow][currentCol])
                 {
-                    currentRow += rowDirection;
-                    currentCol += colDirection;
-
-                    switch (field[currentRow][currentCol])
-                    {
-                        case 'c':
-                            coalCount--;
-                            field[currentRow][currentCol] = '*';
-                            break;
-                        case 'e':
-                            reachEnd = true;
-                            break;
-                        default:
-                            break;
-                    }
+                    case 'c':
+                        coalCount--;
+                        field[currentRow][currentCol] = '*';
+                        break;
+                    case 'e':
+                        reachEnd = true;
+                        break;
+                    default:
+                        break;
                 }
-                
+
                 if (reachEnd || coalCount == 0)
                 {
                     break;
@@ -108,12 +100,15 @@
             }
         }
 
-        private static void GetDirection(int fieldSize, ref int rowDirection, ref int colDirection, int currentRow, int currentCol)
+        private static void GetCurrentPosition(int fieldSize, ref int rowDirection, ref int colDirection, ref int currentRow, ref int currentCol)
         {
             rowDirection = currentRow + rowDirection >= 0 ? rowDirection : 0;
             rowDirection = currentRow + rowDirection < fieldSize ? rowDirection : 0;
             colDirection = currentCol + colDirection >= 0 ? colDirection : 0;
             colDirection = currentCol + colDirection < fieldSize ? colDirection : 0;
+
+            currentRow += rowDirection;
+            currentCol += colDirection;
         }
     }
 }
