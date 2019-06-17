@@ -26,7 +26,8 @@
             //SetsAndDictionaries.ProductShop.Execute();
             //SetsAndDictionaries.CitiesByContinentAndCountry.Execute();
             //SetsAndDictionaries.RecordUniqueNames.Execute();
-            SetsAndDictionaries.ParkingLot.Execute();
+            //SetsAndDictionaries.ParkingLot.Execute();
+            SetsAndDictionaries.SoftUniParty.Execute();
         }
     }
 }
