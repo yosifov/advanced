@@ -25,7 +25,8 @@
             //SetsAndDictionaries.AverageStudentGrades.Execute();
             //SetsAndDictionaries.ProductShop.Execute();
             //SetsAndDictionaries.CitiesByContinentAndCountry.Execute();
-            SetsAndDictionaries.RecordUniqueNames.Execute();
+            //SetsAndDictionaries.RecordUniqueNames.Execute();
+            SetsAndDictionaries.ParkingLot.Execute();
         }
     }
 }
