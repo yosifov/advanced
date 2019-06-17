@@ -22,8 +22,8 @@
             //MultidimensionalArrays.KnightGame.Execute();
             //MultidimensionalArrays.Miner.Execute();
             //SetsAndDictionaries.CountSameValuesInArray.Execute();
-            SetsAndDictionaries.AverageStudentGrades.Execute();
-
+            //SetsAndDictionaries.AverageStudentGrades.Execute();
+            SetsAndDictionaries.ProductShop.Execute();
         }
     }
 }
