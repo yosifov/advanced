@@ -23,7 +23,9 @@
             //MultidimensionalArrays.Miner.Execute();
             //SetsAndDictionaries.CountSameValuesInArray.Execute();
             //SetsAndDictionaries.AverageStudentGrades.Execute();
-            SetsAndDictionaries.ProductShop.Execute();
+            //SetsAndDictionaries.ProductShop.Execute();
+            SetsAndDictionaries.CitiesByContinentAndCountry.Execute();
+
         }
     }
 }
