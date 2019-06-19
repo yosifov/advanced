@@ -28,7 +28,8 @@
             //SetsAndDictionaries.SoftUniParty.Execute();
             //SetsAndDictionaries.UniqueUsernames.Execute();
             //SetsAndDictionaries.SetsOfElements.Execute();
-            SetsAndDictionaries.PeriodicTable.Execute();
+            //SetsAndDictionaries.PeriodicTable.Execute();
+            SetsAndDictionaries.EvenTimes.Execute();
         }
     }
 }
