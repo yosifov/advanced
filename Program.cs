@@ -28,7 +28,8 @@
             //SetsAndDictionaries.RecordUniqueNames.Execute();
             //SetsAndDictionaries.ParkingLot.Execute();
             //SetsAndDictionaries.SoftUniParty.Execute();
-            SetsAndDictionaries.UniqueUsernames.Execute();
+            //SetsAndDictionaries.UniqueUsernames.Execute();
+            SetsAndDictionaries.SetsOfElements.Execute();
         }
     }
 }
