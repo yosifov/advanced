@@ -1,7 +1,5 @@
 ﻿namespace Advanced
 {
-    using System;
-
     class Program
     {
         static void Main(string[] args)
@@ -29,7 +27,8 @@
             //SetsAndDictionaries.ParkingLot.Execute();
             //SetsAndDictionaries.SoftUniParty.Execute();
             //SetsAndDictionaries.UniqueUsernames.Execute();
-            SetsAndDictionaries.SetsOfElements.Execute();
+            //SetsAndDictionaries.SetsOfElements.Execute();
+            SetsAndDictionaries.PeriodicTable.Execute();
         }
     }
 }
