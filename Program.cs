@@ -31,7 +31,8 @@
             //SetsAndDictionaries.PeriodicTable.Execute();
             //SetsAndDictionaries.EvenTimes.Execute();
             //SetsAndDictionaries.CountSymbols.Execute();
-            SetsAndDictionaries.Wardrobe.Execute();
+            //SetsAndDictionaries.Wardrobe.Execute();
+            SetsAndDictionaries.TheVLogger.Execute();
         }
     }
 }
