@@ -29,7 +29,8 @@
             //SetsAndDictionaries.UniqueUsernames.Execute();
             //SetsAndDictionaries.SetsOfElements.Execute();
             //SetsAndDictionaries.PeriodicTable.Execute();
-            SetsAndDictionaries.EvenTimes.Execute();
+            //SetsAndDictionaries.EvenTimes.Execute();
+            SetsAndDictionaries.CountSymbols.Execute();
         }
     }
 }
