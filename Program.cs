@@ -32,7 +32,8 @@
             //SetsAndDictionaries.EvenTimes.Execute();
             //SetsAndDictionaries.CountSymbols.Execute();
             //SetsAndDictionaries.Wardrobe.Execute();
-            SetsAndDictionaries.TheVLogger.Execute();
+            //SetsAndDictionaries.TheVLogger.Execute();
+            FilesAndDirectories.OddLines.OddLines.Execute();
         }
     }
 }
