@@ -35,7 +35,8 @@
             //SetsAndDictionaries.TheVLogger.Execute();
             //FilesAndDirectories.OddLines.OddLines.Execute();
             //FilesAndDirectories.LineNumbers.LineNumbers.Execute();
-            FilesAndDirectories.WordCount.WordCount.Execute();
+            //FilesAndDirectories.WordCount.WordCount.Execute();
+            FilesAndDirectories.MergeFiles.MergeFiles.Execute();
         }
     }
 }
