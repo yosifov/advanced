@@ -34,7 +34,8 @@
             //SetsAndDictionaries.Wardrobe.Execute();
             //SetsAndDictionaries.TheVLogger.Execute();
             //FilesAndDirectories.OddLines.OddLines.Execute();
-            FilesAndDirectories.LineNumbers.LineNumbers.Execute();
+            //FilesAndDirectories.LineNumbers.LineNumbers.Execute();
+            FilesAndDirectories.WordCount.WordCount.Execute();
         }
     }
 }
