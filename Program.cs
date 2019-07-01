@@ -38,7 +38,8 @@
             //FilesAndDirectories.WordCount.WordCount.Execute();
             //FilesAndDirectories.MergeFiles.MergeFiles.Execute();
             //FilesAndDirectories.FolderSize.FolderSize.Execute();
-            FilesAndDirectories.EvenLines.EvenLines.Execute();
+            //FilesAndDirectories.EvenLines.EvenLines.Execute();
+            FilesAndDirectories.LineNumbers2.LineNumbers2.Execute();
         }
     }
 }
