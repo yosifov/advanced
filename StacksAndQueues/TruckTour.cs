@@ -1,12 +1,20 @@
-﻿namespace Advanced.StacksAndQueues
+﻿// <copyright file="TruckTour.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.StacksAndQueues
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
-    class TruckTour
+    /// <summary>
+    /// Truck Tour Class for Stacks and Queues
+    /// </summary>
+    public class TruckTour
     {
+        /// <summary>
+        /// Execute Truck Tour Task
+        /// </summary>
         public static void Execute()
         {
             int pumpsCount = int.Parse(Console.ReadLine());
@@ -56,11 +64,13 @@
                         }
                     }
                 }
+
                 if (fuel >= 0)
                 {
                     Console.WriteLine(index);
                     return;
                 }
+
                 index++;
             }
         }

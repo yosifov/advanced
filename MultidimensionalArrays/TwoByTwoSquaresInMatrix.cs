@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="TwoByTwoSquaresInMatrix.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class TwoByTwoSquaresInMatrix
+    /// <summary>
+    /// Two by Two Squares in Matrix Class for Multidimensional Arrays
+    /// </summary>
+    public class TwoByTwoSquaresInMatrix
     {
+        /// <summary>
+        /// Execute Two by Two Squares in Matrix Task
+        /// </summary>
         public static void Execute()
         {
             var matrixDimensions = Console.ReadLine()

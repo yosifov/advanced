@@ -1,9 +1,18 @@
-﻿namespace Advanced.FilesAndDirectories.LineNumbers
+﻿// <copyright file="LineNumbers.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.FilesAndDirectories.LineNumbers
 {
     using System.IO;
 
-    class LineNumbers
+    /// <summary>
+    /// Line Numbers Class for Files and Directories
+    /// </summary>
+    public class LineNumbers
     {
+        /// <summary>
+        /// Execute Line Numbers Task for Files and Directories
+        /// </summary>
         public static void Execute()
         {
             using (var reader = new StreamReader("../../../FilesAndDirectories/LineNumbers/Input.txt"))

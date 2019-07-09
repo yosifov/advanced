@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="Miner.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class Miner
+    /// <summary>
+    /// Miner Class for Multidimensional Arrays
+    /// </summary>
+    public class Miner
     {
+        /// <summary>
+        /// Execute Miner Task
+        /// </summary>
         public static void Execute()
         {
             int fieldSize = int.Parse(Console.ReadLine());
@@ -86,6 +95,7 @@
                     break;
                 }
             }
+
             if (reachEnd)
             {
                 Console.WriteLine($"Game over! ({currentRow}, {currentCol})");
@@ -100,6 +110,14 @@
             }
         }
 
+        /// <summary>
+        /// Gets the current position of the miner
+        /// </summary>
+        /// <param name="fieldSize">Size of the field</param>
+        /// <param name="rowDirection">Moving direction by row</param>
+        /// <param name="colDirection">Moving direction by col</param>
+        /// <param name="currentRow">Current position row index</param>
+        /// <param name="currentCol">Current position col index</param>
         private static void GetCurrentPosition(int fieldSize, ref int rowDirection, ref int colDirection, ref int currentRow, ref int currentCol)
         {
             rowDirection = currentRow + rowDirection >= 0 ? rowDirection : 0;

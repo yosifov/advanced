@@ -1,11 +1,20 @@
-﻿namespace Advanced.StacksAndQueues
+﻿// <copyright file="BasicStackOperations.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.StacksAndQueues
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class BasicStackOperations
+    /// <summary>
+    /// Basic Stack Operations Class for Stacks and Queues
+    /// </summary>
+    public class BasicStackOperations
     {
+        /// <summary>
+        /// Execute Basic Stack Operations Task
+        /// </summary>
         public static void Execute()
         {
             var input = Console.ReadLine()

@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="SnakeMoves.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class SnakeMoves
+    /// <summary>
+    /// Snake Moves Class for Multidimensional Arrays
+    /// </summary>
+    public class SnakeMoves
     {
+        /// <summary>
+        /// Execute Snake Moves Task
+        /// </summary>
         public static void Execute()
         {
             var matrixDimensions = Console.ReadLine()
@@ -36,6 +45,10 @@
             PrintMatrix(matrix);
         }
 
+        /// <summary>
+        /// Prints two dimensional array
+        /// </summary>
+        /// <param name="matrix">Two dimensional array with chars</param>
         private static void PrintMatrix(char[,] matrix)
         {
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -44,6 +57,7 @@
                 {
                     Console.Write(matrix[row, col]);
                 }
+
                 Console.WriteLine();
             }
         }

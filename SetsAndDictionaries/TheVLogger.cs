@@ -1,18 +1,26 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="TheVLogger.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class TheVLogger
+    /// <summary>
+    /// The VLogger Class for Sets and Dictionaries
+    /// </summary>
+    public class TheVLogger
     {
+        /// <summary>
+        /// Execute The VLogger Task
+        /// </summary>
         public static void Execute()
         {
             string command = Console.ReadLine();
 
             var followers = new Dictionary<string, Dictionary<string, int>>();
             var following = new Dictionary<string, Dictionary<string, int>>();
-
 
             while (command.ToLower() != "statistics")
             {
@@ -23,6 +31,7 @@
                     {
                         followers[vlogerName] = new Dictionary<string, int>();
                     }
+
                     if (!following.ContainsKey(vlogerName))
                     {
                         following[vlogerName] = new Dictionary<string, int>();
@@ -40,20 +49,24 @@
                         {
                             followers[followedName].Add(vlogerName, 0);
                         }
+
                         if (!following[vlogerName].ContainsKey(followedName))
                         {
                             following[vlogerName].Add(followedName, 0);
                         }
+
                         followers[followedName][vlogerName]++;
                         following[vlogerName][followedName]++;
                     }
-                    
                 }
 
                 command = Console.ReadLine();
             }
 
-            followers = followers.OrderByDescending(x => x.Value.Count).ThenBy(x => following[x.Key].Values.Count).ToDictionary(x => x.Key, x => x.Value);
+            followers = followers
+                .OrderByDescending(x => x.Value.Count)
+                .ThenBy(x => following[x.Key].Values.Count)
+                .ToDictionary(x => x.Key, x => x.Value);
 
             int counter = 1;
 
@@ -68,6 +81,7 @@
                         Console.WriteLine($"*  {followerName.Key}");
                     }
                 }
+
                 counter++;
             }
         }

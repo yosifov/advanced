@@ -1,11 +1,20 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="EvenTimes.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class EvenTimes
+    /// <summary>
+    /// Even Times Class for Sets and Dictionaries
+    /// </summary>
+    public class EvenTimes
     {
+        /// <summary>
+        /// Execute Even Times Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());
@@ -18,6 +27,7 @@
                 {
                     elements.Add(number, 0);
                 }
+
                 elements[number]++;
             }
 

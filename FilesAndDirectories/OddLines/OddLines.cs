@@ -1,12 +1,18 @@
-﻿namespace Advanced.FilesAndDirectories.OddLines
+﻿// <copyright file="OddLines.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.FilesAndDirectories.OddLines
 {
-    using System;
-    using System.Collections.Generic;
     using System.IO;
-    using System.Text;
 
-    class OddLines
+    /// <summary>
+    /// Odd Lines Class for Files and Directories
+    /// </summary>
+    public class OddLines
     {
+        /// <summary>
+        /// Execute Odd Lines Task
+        /// </summary>
         public static void Execute()
         {
             using (var reader = new StreamReader("../../../FilesAndDirectories/OddLines/Input.txt"))
@@ -22,6 +28,7 @@
                         {
                             writer.WriteLine(line);
                         }
+
                         counter++;
                         line = reader.ReadLine();
                     }

@@ -1,12 +1,20 @@
-﻿namespace Advanced.StacksAndQueues
+﻿// <copyright file="BasicQueueOperations.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.StacksAndQueues
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
-    class BasicQueueOperations
+    /// <summary>
+    /// Basic Queue Operations Class for Stacks and Queues
+    /// </summary>
+    public class BasicQueueOperations
     {
+        /// <summary>
+        /// Execute Basic Queue Operations Task
+        /// </summary>
         public static void Execute()
         {
             var input = Console.ReadLine()

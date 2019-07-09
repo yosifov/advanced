@@ -1,10 +1,18 @@
-﻿namespace Advanced.FilesAndDirectories.FolderSize
+﻿// <copyright file="FolderSize.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.FilesAndDirectories.FolderSize
 {
-    using System;
     using System.IO;
-
-    class FolderSize
+    
+    /// <summary>
+    /// Folder Size Class for Files and Directories
+    /// </summary>
+    public class FolderSize
     {
+        /// <summary>
+        /// Execute the Folder Size Task for Files and Directories
+        /// </summary>
         public static void Execute()
         {
             var filesInDir = Directory.GetFiles("../../../FilesAndDirectories/FolderSize");

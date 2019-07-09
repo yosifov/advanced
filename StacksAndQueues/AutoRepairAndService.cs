@@ -1,11 +1,20 @@
-﻿namespace Advanced.StacksAndQueues
+﻿// <copyright file="AutoRepairAndService.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.StacksAndQueues
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-    class AutoRepairAndService
+    /// <summary>
+    /// Auto Repair and Service Class for Stacks and Queues
+    /// </summary>
+    public class AutoRepairAndService
     {
+        /// <summary>
+        /// Execute Auto Repair and Service Task
+        /// </summary>
         public static void Execute()
         {
             var input = Console.ReadLine().Split();
@@ -26,6 +35,7 @@
                             servedVehicles.Push(awaitingVehicles.Peek());
                             sb.AppendLine($"Vehicle {awaitingVehicles.Dequeue()} got served.");
                         }
+
                         break;
                     case "CarInfo":
                         string modelName = commands.Split("-")[1];
@@ -37,6 +47,7 @@
                         {
                             sb.AppendLine("Served.");
                         }
+
                         break;
                     case "History":
                         sb.AppendLine(string.Join(", ", servedVehicles));
@@ -44,16 +55,20 @@
                     default:
                         break;
                 }
+
                 commands = Console.ReadLine();
             }
+
             if (awaitingVehicles.Count != 0)
             {
                 sb.AppendLine($"Vehicles for service: {string.Join(", ", awaitingVehicles)}");
             }
+
             if (servedVehicles.Count != 0)
             {
                 sb.AppendLine($"Served vehicles: {string.Join(", ", servedVehicles)}");
             }
+
             Console.WriteLine(sb);
         }
     }

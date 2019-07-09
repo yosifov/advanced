@@ -1,11 +1,20 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="AverageStudentGrades.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class AverageStudentGrades
+    /// <summary>
+    /// Average Student Grades Class for Sets and Dictionaries
+    /// </summary>
+    public class AverageStudentGrades
     {
+        /// <summary>
+        /// Execute Average Student Grades Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());
@@ -21,6 +30,7 @@
                 {
                     students[studentName] = new List<double>();
                 }
+
                 students[studentName].Add(studentGrade);
             }
 

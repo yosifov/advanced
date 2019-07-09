@@ -1,11 +1,20 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="SetsOfElements.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class SetsOfElements
+    /// <summary>
+    /// Sets of Elements Class for Sets and Dictionaries
+    /// </summary>
+    public class SetsOfElements
     {
+        /// <summary>
+        /// Execute Sets of Elements Task 
+        /// </summary>
         public static void Execute()
         {
             var input = Console.ReadLine()
@@ -23,6 +32,7 @@
             {
                 firstSet.Add(int.Parse(Console.ReadLine()));
             }
+
             for (int i = 0; i < secondSetLength; i++)
             {
                 secondSet.Add(int.Parse(Console.ReadLine()));

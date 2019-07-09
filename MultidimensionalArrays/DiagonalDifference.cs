@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="DiagonalDifference.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class DiagonalDifference
+    /// <summary>
+    /// Diagonal Difference Class for Multidimensional Arrays
+    /// </summary>
+    public class DiagonalDifference
     {
+        /// <summary>
+        /// Execute Diagonal Difference Task
+        /// </summary>
         public static void Execute()
         {
             int matrixSize = int.Parse(Console.ReadLine());
@@ -29,7 +38,6 @@
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 primaryDiagonal += matrix[row, row];
-
             }
 
             int secondaryDiagonal = 0;
@@ -43,6 +51,7 @@
                 {
                     break;
                 }
+
                 secondaryDiagonal += matrix[currentRow, currentCol];
                 currentRow++;
                 currentCol--;

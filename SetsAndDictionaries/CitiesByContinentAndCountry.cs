@@ -1,10 +1,19 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="CitiesByContinentAndCountry.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
 
-    class CitiesByContinentAndCountry
+    /// <summary>
+    /// Cities by Continent and Country Class for Sets and Dictionaries
+    /// </summary>
+    public class CitiesByContinentAndCountry
     {
+        /// <summary>
+        /// Execute Cities by Continent and Country Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());
@@ -22,10 +31,12 @@
                 {
                     continents[continent] = new Dictionary<string, List<string>>();
                 }
+
                 if (!continents[continent].ContainsKey(country))
                 {
                     continents[continent][country] = new List<string>();
                 }
+
                 continents[continent][country].Add(city);
             }
 
@@ -35,7 +46,7 @@
 
                 foreach (var countryKvp in continentKvp.Value)
                 {
-                    Console.WriteLine($"  {countryKvp.Key} -> {string.Join(", ",countryKvp.Value)}");
+                    Console.WriteLine($"  {countryKvp.Key} -> {string.Join(", ", countryKvp.Value)}");
                 }
             }
         }

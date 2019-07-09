@@ -1,10 +1,19 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="Wardrobe.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
 
-    class Wardrobe
+    /// <summary>
+    /// Wardrobe Class for Sets and Dictionaries
+    /// </summary>
+    public class Wardrobe
     {
+        /// <summary>
+        /// Execute Wardrobe Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());
@@ -20,12 +29,14 @@
                 {
                     wardrobe[color] = new Dictionary<string, int>();
                 }
+
                 foreach (var garment in clothes)
                 {
                     if (!wardrobe[color].ContainsKey(garment))
                     {
                         wardrobe[color].Add(garment, 0);
                     }
+
                     wardrobe[color][garment]++;
                 }
             }
@@ -37,6 +48,12 @@
             PrintWardrobe(wardrobe, searchedColor, searchedGarment);
         }
 
+        /// <summary>
+        /// Prints the wardrobe collection filtered by color and garment
+        /// </summary>
+        /// <param name="wardrobe">Dictionary with string keys and integer values</param>
+        /// <param name="color">Filtering color</param>
+        /// <param name="garment">Filtering garment</param>
         private static void PrintWardrobe(Dictionary<string, Dictionary<string, int>> wardrobe, string color, string garment)
         {
             foreach (var colorKvp in wardrobe)

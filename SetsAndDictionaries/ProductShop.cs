@@ -1,10 +1,19 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="ProductShop.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
 
-    class ProductShop
+    /// <summary>
+    /// Product Shop Class for Sets and Dictionaries
+    /// </summary>
+    public class ProductShop
     {
+        /// <summary>
+        /// Execute Product Shop Task
+        /// </summary>
         public static void Execute()
         {
             string command = Console.ReadLine();
@@ -19,6 +28,7 @@
                 {
                     shops[shop] = new Dictionary<string, double>();
                 }
+
                 shops[shop][product] = price;
 
                 command = Console.ReadLine();

@@ -1,12 +1,21 @@
-﻿namespace Advanced.StacksAndQueues
+﻿// <copyright file="FastFood.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.StacksAndQueues
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
 
-    class FastFood
+    /// <summary>
+    /// Fast Food Class for Stacks and Queues 
+    /// </summary>
+    public class FastFood
     {
+        /// <summary>
+        /// Execute Fast Food Task
+        /// </summary>
         public static void Execute()
         {
             int quantity = int.Parse(Console.ReadLine());
@@ -34,7 +43,7 @@
                     break;
                 }
             }
-            
+
             if (orders.Count == 0)
             {
                 sb.AppendLine("Orders complete");

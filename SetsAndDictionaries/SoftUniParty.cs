@@ -1,11 +1,20 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="SoftUniParty.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
 
-    class SoftUniParty
+    /// <summary>
+    /// SoftUniversity Party Class for Sets and Dictionaries
+    /// </summary>
+    public class SoftUniParty
     {
+        /// <summary>
+        /// Execute SoftUniversity Party Task
+        /// </summary>
         public static void Execute()
         {
             string expressiong = @"^[0-9]{1}[\w\d]*";
@@ -25,8 +34,10 @@
                 {
                     regularGuests.Add(input);
                 }
+
                 input = Console.ReadLine();
             }
+
             input = Console.ReadLine();
 
             while (input.ToLower() != "end")
@@ -45,8 +56,10 @@
                         regularGuests.Remove(input);
                     }
                 }
+
                 input = Console.ReadLine();
             }
+
             Console.WriteLine(vipGuests.Count + regularGuests.Count);
             if (vipGuests.Count != 0)
             {
@@ -55,6 +68,7 @@
                     Console.WriteLine(vipGuest);
                 }
             }
+
             if (regularGuests.Count != 0)
             {
                 foreach (var regularGuest in regularGuests)
@@ -62,7 +76,6 @@
                     Console.WriteLine(regularGuest);
                 }
             }
-
         }
     }
 }

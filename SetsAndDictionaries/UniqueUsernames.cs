@@ -1,10 +1,19 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="UniqueUsernames.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
 
-    class UniqueUsernames
+    /// <summary>
+    /// Unique Usernames Class for Sets and Dictionaries
+    /// </summary>
+    public class UniqueUsernames
     {
+        /// <summary>
+        /// Execute Unique Usernames Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());

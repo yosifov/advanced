@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="BombTheBasement.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class BombTheBasement
+    /// <summary>
+    /// Bomb the Basement Class for Multidimensional Arrays
+    /// </summary>
+    public class BombTheBasement
     {
+        /// <summary>
+        /// Execute Bomb the Basement Task
+        /// </summary>
         public static void Execute()
         {
             var matrixDimensions = Console.ReadLine()
@@ -48,6 +57,7 @@
                 {
                     secondMatrix[row][col] = matrix[col, row];
                 }
+
                 secondMatrix[row] = secondMatrix[row].OrderByDescending(x => x).ToArray();
             }
 
@@ -62,6 +72,10 @@
             PrintMatrix(matrix);
         }
 
+        /// <summary>
+        /// Print the two dimensional array
+        /// </summary>
+        /// <param name="matrix">Two dimensional array of integers</param>
         private static void PrintMatrix(int[,] matrix)
         {
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -70,6 +84,7 @@
                 {
                     Console.Write(matrix[row, col]);
                 }
+
                 Console.WriteLine();
             }
         }

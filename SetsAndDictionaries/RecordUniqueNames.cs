@@ -1,10 +1,19 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="RecordUniqueNames.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
 
-    class RecordUniqueNames
+    /// <summary>
+    /// Record Unique Names Class for Sets and Dictionaries
+    /// </summary>
+    public class RecordUniqueNames
     {
+        /// <summary>
+        /// Execute Record Unique Names Task
+        /// </summary>
         public static void Execute()
         {
             int lines = int.Parse(Console.ReadLine());

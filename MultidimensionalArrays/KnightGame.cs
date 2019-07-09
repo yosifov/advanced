@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="KnightGame.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class KnightGame
+    /// <summary>
+    /// Knight Game Class for Multidimensional Arrays
+    /// </summary>
+    public class KnightGame
     {
+        /// <summary>
+        /// Execute Knight Game Task
+        /// </summary>
         public static void Execute()
         {
             int matrixSize = int.Parse(Console.ReadLine());
@@ -44,6 +53,12 @@
             Console.WriteLine(kingsRemoved);
         }
 
+        /// <summary>
+        /// Counts the knights that can hit another knights
+        /// </summary>
+        /// <param name="matrixSize">The size of the jagged array</param>
+        /// <param name="matrix">Jagged array with chars. Represents the play field</param>
+        /// <param name="kingCounter">Jagged array with integers. Store the count of knight that the current knight can hit.</param>
         private static void CountKnights(int matrixSize, char[][] matrix, int[][] kingCounter)
         {
             foreach (var row in kingCounter)
@@ -61,30 +76,37 @@
                         {
                             kingCounter[row + 2][col + 1]++;
                         }
+
                         if (row + 2 < matrixSize && col - 1 >= 0 && (matrix[row + 2][col - 1] == 'K'))
                         {
                             kingCounter[row + 2][col - 1]++;
                         }
+
                         if (row - 2 >= 0 && col + 1 < matrixSize && matrix[row - 2][col + 1] == 'K')
                         {
                             kingCounter[row - 2][col + 1]++;
                         }
+
                         if (row - 2 >= 0 && col - 1 >= 0 && matrix[row - 2][col - 1] == 'K')
                         {
                             kingCounter[row - 2][col - 1]++;
                         }
+
                         if (row - 1 >= 0 && col - 2 >= 0 && matrix[row - 1][col - 2] == 'K')
                         {
                             kingCounter[row - 1][col - 2]++;
                         }
+
                         if (row + 1 < matrixSize && col - 2 >= 0 && matrix[row + 1][col - 2] == 'K')
                         {
                             kingCounter[row + 1][col - 2]++;
                         }
+
                         if (row - 1 >= 0 && col + 2 < matrixSize && matrix[row - 1][col + 2] == 'K')
                         {
                             kingCounter[row - 1][col + 2]++;
                         }
+
                         if (row + 1 < matrixSize && col + 2 < matrixSize && matrix[row + 1][col + 2] == 'K')
                         {
                             kingCounter[row + 1][col + 2]++;
@@ -94,6 +116,11 @@
             }
         }
 
+        /// <summary>
+        /// Check if there is a knight that can hit another knight
+        /// </summary>
+        /// <param name="checkMatrix">Jagged array with integers. </param>
+        /// <returns>Returns true or false</returns>
         private static bool NeedToRemoveKnight(int[][] checkMatrix)
         {
             foreach (var row in checkMatrix)
@@ -103,6 +130,7 @@
                     return true;
                 }
             }
+
             return false;
         }
     }

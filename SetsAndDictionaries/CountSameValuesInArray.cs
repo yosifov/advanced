@@ -1,11 +1,20 @@
-﻿namespace Advanced.SetsAndDictionaries
+﻿// <copyright file="CountSameValuesInArray.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.SetsAndDictionaries
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    class CountSameValuesInArray
+    /// <summary>
+    /// Count Same Values in Array Class for Sets and Dictionaries
+    /// </summary>
+    public class CountSameValuesInArray
     {
+        /// <summary>
+        /// Execute Count Same Values in Array Task
+        /// </summary>
         public static void Execute()
         {
             var inputs = Console.ReadLine()
@@ -20,6 +29,7 @@
                 {
                     numbers.Add(input, 0);
                 }
+
                 numbers[input]++;
             }
 

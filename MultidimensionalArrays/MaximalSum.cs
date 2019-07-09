@@ -1,10 +1,19 @@
-﻿namespace Advanced.MultidimensionalArrays
+﻿// <copyright file="MaximalSum.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.MultidimensionalArrays
 {
     using System;
     using System.Linq;
 
-    class MaximalSum
+    /// <summary>
+    /// Maximal Sum Class for Multidimensional Arrays
+    /// </summary>
+    public class MaximalSum
     {
+        /// <summary>
+        /// Execute Maximal Sum Task
+        /// </summary>
         public static void Execute()
         {
             var matrixDimensions = Console.ReadLine()
@@ -62,6 +71,7 @@
                 {
                     Console.Write(matrix[row, col] + " ");
                 }
+
                 Console.WriteLine();
             }
         }

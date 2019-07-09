@@ -1,10 +1,19 @@
-﻿namespace Advanced.FilesAndDirectories.LineNumbers2
+﻿// <copyright file="LineNumbers2.cs" company="Yosifov">
+// Copyright (c) Yosifov. All rights reserved.
+// </copyright>
+namespace Advanced.FilesAndDirectories.LineNumbers2
 {
     using System.IO;
     using System.Text.RegularExpressions;
 
-    class LineNumbers2
+    /// <summary>
+    /// Line Numbers 2 Class for Files and Directories
+    /// </summary>
+    public class LineNumbers2
     {
+        /// <summary>
+        /// Execute the Line Numbers 2 Task for Files and Directories
+        /// </summary>
         public static void Execute()
         {
             using (var reader = new StreamReader("../../../FilesAndDirectories/LineNumbers2/text.txt"))
@@ -15,15 +24,14 @@
                     var line = reader.ReadLine();
                     while (line != null)
                     {
-                        var lineCharsCount = Regex.Replace(line, @"[-,.!?' ]{1}", "").Length;
-                        var linePunctCount = Regex.Replace(line, @"[\w ]", "").Length;
+                        var lineCharsCount = Regex.Replace(line, @"[-,.!?' ]{1}", string.Empty).Length;
+                        var linePunctCount = Regex.Replace(line, @"[\w ]", string.Empty).Length;
 
                         writer.WriteLine($"Line {counter}: {line} ({lineCharsCount})({linePunctCount})");
 
                         counter++;
                         line = reader.ReadLine();
                     }
-
                 }
             }
         }
