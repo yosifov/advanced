@@ -51,7 +51,8 @@ namespace Advanced
             // FilesAndDirectories.LineNumbers2.LineNumbers2.Execute();
             // FunctionalProgramming.SortEvenNumbers.Execute();
             // FunctionalProgramming.SumNumbers.Execute();
-            FunctionalProgramming.CountUppercaseWords.Execute();
+            // FunctionalProgramming.CountUppercaseWords.Execute();
+            FunctionalProgramming.AddVAT.Execute();
         }
     }
 }
