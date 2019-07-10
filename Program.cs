@@ -48,7 +48,8 @@ namespace Advanced
             // FilesAndDirectories.MergeFiles.MergeFiles.Execute();
             // FilesAndDirectories.FolderSize.FolderSize.Execute();
             // FilesAndDirectories.EvenLines.EvenLines.Execute();
-            FilesAndDirectories.LineNumbers2.LineNumbers2.Execute();
+            // FilesAndDirectories.LineNumbers2.LineNumbers2.Execute();
+            FunctionalProgramming.SortEvenNumbers.Execute();
         }
     }
 }
