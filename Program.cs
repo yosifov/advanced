@@ -50,7 +50,8 @@ namespace Advanced
             // FilesAndDirectories.EvenLines.EvenLines.Execute();
             // FilesAndDirectories.LineNumbers2.LineNumbers2.Execute();
             // FunctionalProgramming.SortEvenNumbers.Execute();
-            FunctionalProgramming.SumNumbers.Execute();
+            // FunctionalProgramming.SumNumbers.Execute();
+            FunctionalProgramming.CountUppercaseWords.Execute();
         }
     }
 }
