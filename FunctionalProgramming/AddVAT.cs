@@ -19,7 +19,7 @@ namespace Advanced.FunctionalProgramming
             Console.ReadLine()
                 .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
-                .Select(x => x + x * 0.2)
+                .Select(x => x + (x * 0.2))
                 .ToList()
                 .ForEach(x => Console.WriteLine($"{x:F2}"));
         }

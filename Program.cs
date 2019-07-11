@@ -9,7 +9,7 @@ namespace Advanced
     public class Program
     {
         /// <summary>
-        /// The Main method of the program
+        /// The Main method of the program. Executes specific task.
         /// </summary>
         public static void Main()
         {
