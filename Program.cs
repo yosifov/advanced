@@ -53,7 +53,8 @@ namespace Advanced
             // FunctionalProgramming.SumNumbers.Execute();
             // FunctionalProgramming.CountUppercaseWords.Execute();
             // FunctionalProgramming.AddVAT.Execute();
-            FunctionalProgramming.FilterByAge.Execute();
+            // FunctionalProgramming.FilterByAge.Execute();
+            FunctionalProgramming.ActionPoint.Execute();
         }
     }
 }
