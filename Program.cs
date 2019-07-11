@@ -54,7 +54,8 @@ namespace Advanced
             // FunctionalProgramming.CountUppercaseWords.Execute();
             // FunctionalProgramming.AddVAT.Execute();
             // FunctionalProgramming.FilterByAge.Execute();
-            FunctionalProgramming.ActionPoint.Execute();
+            // FunctionalProgramming.ActionPoint.Execute();
+            FunctionalProgramming.KnightsOfHonor.Exercise();
         }
     }
 }
