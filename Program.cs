@@ -57,7 +57,8 @@ namespace Advanced
             // FunctionalProgramming.ActionPoint.Execute();
             // FunctionalProgramming.KnightsOfHonor.Exercise();
             // FunctionalProgramming.CustomMinFunction.Execute();
-            FunctionalProgramming.FindEvensOrOdds.Execute();
+            // FunctionalProgramming.FindEvensOrOdds.Execute();
+            FunctionalProgramming.AppliedArithmetics.Execute();
         }
     }
 }
