@@ -55,7 +55,8 @@ namespace Advanced
             // FunctionalProgramming.AddVAT.Execute();
             // FunctionalProgramming.FilterByAge.Execute();
             // FunctionalProgramming.ActionPoint.Execute();
-            FunctionalProgramming.KnightsOfHonor.Exercise();
+            // FunctionalProgramming.KnightsOfHonor.Exercise();
+            FunctionalProgramming.CustomMinFunction.Execute();
         }
     }
 }
