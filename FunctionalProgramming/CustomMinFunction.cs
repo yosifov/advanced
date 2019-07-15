@@ -8,7 +8,7 @@ namespace Advanced.FunctionalProgramming
     using System.Linq;
 
     /// <summary>
-    /// Custom Min Function Class for Functional Prgramming Exercise
+    /// Custom Min Function Class for Functional Programming Exercise
     /// </summary>
     public class CustomMinFunction
     {
