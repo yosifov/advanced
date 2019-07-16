@@ -60,7 +60,8 @@ namespace Advanced
             // FunctionalProgramming.FindEvensOrOdds.Execute();
             // FunctionalProgramming.AppliedArithmetics.Execute();
             // FunctionalProgramming.ReverseAndExclude.Execute();
-            FunctionalProgramming.PredicateForNames.Execute();
+            // FunctionalProgramming.PredicateForNames.Execute();
+            FunctionalProgramming.CustomComparator.Execute();
         }
     }
 }
