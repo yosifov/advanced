@@ -23,9 +23,9 @@ namespace Advanced.FunctionalProgramming
 
             string command = Console.ReadLine();
 
-            Func<int, int> addOne = x => x + 1;
+            Func<int, int> addOne = x => ++x;
             Func<int, int> multiplyByTwo = x => x * 2;
-            Func<int, int> substractOne = x => x - 1;
+            Func<int, int> subtractOne = x => --x;
 
             while (command.ToLower() != "end")
             {
@@ -41,7 +41,7 @@ namespace Advanced.FunctionalProgramming
                         numbers = numbers.Select(multiplyByTwo).ToList();
                         break;
                     case "subtract":
-                        numbers = numbers.Select(substractOne).ToList();
+                        numbers = numbers.Select(subtractOne).ToList();
                         break;
                     default:
                         break;
