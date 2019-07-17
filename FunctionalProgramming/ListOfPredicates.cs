@@ -8,7 +8,7 @@ namespace Advanced.FunctionalProgramming
     using System.Linq;
 
     /// <summary>
-    /// List of Predicates Class for Functionla Programming Exercise
+    /// List of Predicates Class for Functional Programming Exercise
     /// </summary>
     public class ListOfPredicates
     {
@@ -36,6 +36,7 @@ namespace Advanced.FunctionalProgramming
                         check = false;
                     }
                 }
+
                 return check;
             };
 
