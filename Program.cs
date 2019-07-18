@@ -64,7 +64,8 @@ namespace Advanced
             // FunctionalProgramming.CustomComparator.Execute();
             // FunctionalProgramming.ListOfPredicates.Execute();
             // FunctionalProgramming.PredicateParty.Execute();
-            FunctionalProgramming.TriFunction.Execute();
+            // FunctionalProgramming.TriFunction.Execute();
+            FunctionalProgramming.PartyReservationFilterModule.Execute();
         }
     }
 }
