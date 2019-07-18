@@ -63,7 +63,8 @@ namespace Advanced
             // FunctionalProgramming.PredicateForNames.Execute();
             // FunctionalProgramming.CustomComparator.Execute();
             // FunctionalProgramming.ListOfPredicates.Execute();
-            FunctionalProgramming.PredicateParty.Execute();
+            // FunctionalProgramming.PredicateParty.Execute();
+            FunctionalProgramming.TriFunction.Execute();
         }
     }
 }
