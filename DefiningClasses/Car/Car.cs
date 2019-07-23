@@ -38,6 +38,16 @@ namespace Advanced.DefiningClasses.Car
         private double fuelConsumption;
 
         /// <summary>
+        /// Car Engine
+        /// </summary>
+        private Engine engine;
+
+        /// <summary>
+        /// Car Tires
+        /// </summary>
+        private Tire[] tires;
+
+        /// <summary>
         /// Initializes a new instance of the Car class with default values
         /// </summary>
         public Car()
@@ -79,6 +89,23 @@ namespace Advanced.DefiningClasses.Car
         }
 
         /// <summary>
+        /// Initializes a new instance of the Car class with user defined make, model, year, fuel quantity, fuel consumption, engine and tires.
+        /// </summary>
+        /// <param name="make">Car make</param>
+        /// <param name="model">Car model</param>
+        /// <param name="year">Car year</param>
+        /// <param name="fuelQuantity">Car fuel quantity</param>
+        /// <param name="fuelConsumption">Car fuel consumption</param>
+        /// <param name="engine">Car engine</param>
+        /// <param name="tires">Car tires</param>
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires)
+            : this(make, model, year, fuelQuantity, fuelConsumption)
+        {
+            this.Engine = engine;
+            this.Tires = tires;
+        }
+
+        /// <summary>
         /// Gets or sets Car Make
         /// </summary>
         public string Make
@@ -91,10 +118,8 @@ namespace Advanced.DefiningClasses.Car
                 {
                     throw new ArgumentException("Car Make must be at least 2 characters.");
                 }
-                else
-                {
-                    this.make = value;
-                }
+
+                this.make = value;
             }
         }
 
@@ -111,10 +136,8 @@ namespace Advanced.DefiningClasses.Car
                 {
                     throw new ArgumentException("Car Model must be at least 1 character.");
                 }
-                else
-                {
-                    this.model = value;
-                }
+
+                this.model = value;
             }
         }
 
@@ -131,10 +154,8 @@ namespace Advanced.DefiningClasses.Car
                 {
                     throw new ArgumentOutOfRangeException("Car Year must be between 1900 and 2030 year.");
                 }
-                else
-                {
-                    this.year = value;
-                }
+
+                this.year = value;
             }
         }
 
@@ -151,10 +172,8 @@ namespace Advanced.DefiningClasses.Car
                 {
                     throw new ArgumentException("Fuel Quantity can't be below 0 liters.");
                 }
-                else
-                {
-                    this.fuelQuantity = value;
-                }
+
+                this.fuelQuantity = value;
             }
         }
 
@@ -171,12 +190,20 @@ namespace Advanced.DefiningClasses.Car
                 {
                     throw new ArgumentOutOfRangeException("Fuel Consumption must be between 1 and 50 liters per km.");
                 }
-                else
-                {
-                    this.fuelConsumption = value;
-                }
+
+                this.fuelConsumption = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets Car engine
+        /// </summary>
+        public Engine Engine { get; set; }
+
+        /// <summary>
+        /// Gets or sets Car tires
+        /// </summary>
+        public Tire[] Tires { get; set; }
 
         /// <summary>
         /// Drives the car if there is enough fuel left
@@ -200,7 +227,25 @@ namespace Advanced.DefiningClasses.Car
         /// <returns>Car information</returns>
         public string WhoAmI()
         {
-            return $"Make: {this.Make}\nModel: {this.Model}\nYear: {this.Year}\nFuel: {this.FuelQuantity:F2}L";
+            var tires = new StringBuilder();
+
+            foreach (var tire in this.Tires)
+            {
+                tires.Append("Year: ");
+                tires.Append(tire.Year);
+                tires.Append(" ");
+                tires.Append("Pressure: ");
+                tires.Append(tire.Pressure);
+                tires.Append(Environment.NewLine);
+            }
+
+            return $"Make: {this.Make}\n" +
+                $"Model: {this.Model}\n" +
+                $"Year: {this.Year}\n" +
+                $"Fuel: {this.FuelQuantity:F2}L\n" +
+                $"Engine Horse Power: {this.Engine.HorsePower}\n" +
+                $"Engine Cubic Capacity: {this.Engine.CubicCapacity}\n" +
+                $"Tires: \n {tires}";
         }
     }
 }
