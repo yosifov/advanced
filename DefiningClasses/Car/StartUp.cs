@@ -5,6 +5,7 @@ namespace Advanced.DefiningClasses.Car
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     /// <summary>
     /// Startup Class for Car Class in Defining Classes Lab
@@ -19,6 +20,7 @@ namespace Advanced.DefiningClasses.Car
             var tires = new List<Tire[]>();
             var engines = new List<Engine>();
             var cars = new List<Car>();
+            var specialCars = new List<Car>();
 
             string input = Console.ReadLine();
 
@@ -60,7 +62,6 @@ namespace Advanced.DefiningClasses.Car
 
             input = Console.ReadLine();
 
-
             while (input != "Show special")
             {
                 string carMake = input.Split()[0];
@@ -77,6 +78,24 @@ namespace Advanced.DefiningClasses.Car
             }
 
             foreach (var car in cars)
+            {
+                double tirePressureSum = 0;
+
+                foreach (var tire in car.Tires)
+                {
+                    tirePressureSum += tire.Pressure;
+                }
+
+                if (car.Year >= 2017
+                    && car.Engine.HorsePower >= 330
+                    && (tirePressureSum >= 9 || tirePressureSum <= 10))
+                {
+                    car.Drive(20);
+                    specialCars.Add(car);
+                }
+            }
+
+            foreach (var car in specialCars)
             {
                 Console.WriteLine(car.WhoAmI());
             }

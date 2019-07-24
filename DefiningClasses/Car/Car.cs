@@ -211,13 +211,13 @@ namespace Advanced.DefiningClasses.Car
         /// <param name="distance">Distance to drive</param>
         public void Drive(double distance)
         {
-            if (this.FuelQuantity - (distance * this.FuelConsumption) < 0)
+            if (this.FuelQuantity - (distance * (this.FuelConsumption / 100)) < 0)
             {
                 Console.WriteLine("Not enough fuel to perform this trip!");
             }
             else
             {
-                this.FuelQuantity -= distance * this.FuelConsumption;
+                this.FuelQuantity -= distance * (this.FuelConsumption / 100);
             }
         }
 
@@ -227,25 +227,11 @@ namespace Advanced.DefiningClasses.Car
         /// <returns>Car information</returns>
         public string WhoAmI()
         {
-            var tires = new StringBuilder();
-
-            foreach (var tire in this.Tires)
-            {
-                tires.Append("Year: ");
-                tires.Append(tire.Year);
-                tires.Append(" ");
-                tires.Append("Pressure: ");
-                tires.Append(tire.Pressure);
-                tires.Append(Environment.NewLine);
-            }
-
             return $"Make: {this.Make}\n" +
                 $"Model: {this.Model}\n" +
                 $"Year: {this.Year}\n" +
-                $"Fuel: {this.FuelQuantity:F2}L\n" +
-                $"Engine Horse Power: {this.Engine.HorsePower}\n" +
-                $"Engine Cubic Capacity: {this.Engine.CubicCapacity}\n" +
-                $"Tires: \n {tires}";
+                $"HorsePowers: {this.Engine.HorsePower}\n" +
+                $"FuelQuantity: {this.FuelQuantity}";
         }
     }
 }
