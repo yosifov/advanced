@@ -66,7 +66,8 @@ namespace Advanced
             // FunctionalProgramming.PredicateParty.Execute();
             // FunctionalProgramming.TriFunction.Execute();
             // FunctionalProgramming.PartyReservationFilterModule.Execute();
-            DefiningClasses.Car.StartUp.Execute();
+            // DefiningClasses.Car.StartUp.Execute();
+            DefiningClasses.Person.StartUp.Execute();
         }
     }
 }
