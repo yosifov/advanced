@@ -17,7 +17,22 @@ namespace Advanced.DefiningClasses.Person
         /// </summary>
         public static void Execute()
         {
-            var person = new Person();
+            int n = int.Parse(Console.ReadLine());
+            var myFamily = new Family();
+
+            for (int i = 0; i < n; i++)
+            {
+                var input = Console.ReadLine();
+
+                string name = input.Split()[0];
+                int age = int.Parse(input.Split()[1]);
+
+                myFamily.AddMember(new Person(name, age));
+            }
+
+            var oldestMember = myFamily.GetOldestMember();
+
+            Console.WriteLine($"Name: {oldestMember.Name}, Age: {oldestMember.Age}");
         }
     }
 }
