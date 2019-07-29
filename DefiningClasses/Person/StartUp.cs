@@ -4,8 +4,7 @@
 namespace Advanced.DefiningClasses.Person
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
+    using System.Linq;
 
     /// <summary>
     /// Startup Class for Person Task in Defining Classes Exercise
@@ -30,9 +29,12 @@ namespace Advanced.DefiningClasses.Person
                 myFamily.AddMember(new Person(name, age));
             }
 
-            var oldestMember = myFamily.GetOldestMember();
+            var membersOverThirty = myFamily.GetMembersOverThirty();
 
-            Console.WriteLine($"Name: {oldestMember.Name}, Age: {oldestMember.Age}");
+            foreach (var memberOverThirty in membersOverThirty.OrderBy(x => x.Name))
+            {
+                Console.WriteLine($"{memberOverThirty.Name} - {memberOverThirty.Age}");
+            }
         }
     }
 }

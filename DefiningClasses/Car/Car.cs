@@ -4,8 +4,6 @@
 namespace Advanced.DefiningClasses.Car
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// Car Class for Defining Classes Lab
