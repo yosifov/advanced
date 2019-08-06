@@ -69,7 +69,8 @@ namespace Advanced
             // DefiningClasses.Car.StartUp.Execute();
             // DefiningClasses.Person.StartUp.Execute();
             // DefiningClasses.DateModifier.StartUp.Execute();
-            DefiningClasses.CompanyRoster.StartUp.Execute();
+            // DefiningClasses.CompanyRoster.StartUp.Execute();
+            DefiningClasses.SpeedRacing.StartUp.Execute();
         }
     }
 }
