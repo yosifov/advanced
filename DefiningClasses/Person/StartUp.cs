@@ -4,7 +4,6 @@
 namespace Advanced.DefiningClasses.Person
 {
     using System;
-    using System.Linq;
 
     /// <summary>
     /// Startup Class for Person Task in Defining Classes Exercise
@@ -31,10 +30,7 @@ namespace Advanced.DefiningClasses.Person
 
             var membersOverThirty = myFamily.GetMembersOverThirty();
 
-            foreach (var memberOverThirty in membersOverThirty.OrderBy(x => x.Name))
-            {
-                Console.WriteLine($"{memberOverThirty.Name} - {memberOverThirty.Age}");
-            }
+            Console.WriteLine(string.Join(Environment.NewLine, membersOverThirty));
         }
     }
 }

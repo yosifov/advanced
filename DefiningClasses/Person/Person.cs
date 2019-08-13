@@ -25,9 +25,8 @@ namespace Advanced.DefiningClasses.Person
         /// Initializes a new instance of the Person class with default name and age.
         /// </summary>
         public Person()
+            : this("No name", 1)
         {
-            this.Name = "No name";
-            this.Age = 1;
         }
 
         /// <summary>
@@ -91,6 +90,15 @@ namespace Advanced.DefiningClasses.Person
             sb.Append(this.Age);
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Override ToString method
+        /// </summary>
+        /// <returns>Person to string</returns>
+        public override string ToString()
+        {
+            return $"{this.Name} - {this.Age}"; 
         }
     }
 }

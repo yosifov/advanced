@@ -4,6 +4,7 @@
 namespace Advanced.DefiningClasses.Person
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     /// <summary>
     /// Family Class for Defining Classes Exercise
@@ -43,17 +44,9 @@ namespace Advanced.DefiningClasses.Person
         /// <returns>Person object</returns>
         public Person GetOldestMember()
         {
-            var oldestMember = new Person();
-
-            foreach (var member in this.Members)
-            {
-                if (member.Age >= oldestMember.Age)
-                {
-                    oldestMember = member;
-                }
-            }
-
-            return oldestMember;
+            return this.members
+                .OrderByDescending(x => x.Age)
+                .FirstOrDefault();
         }
 
         /// <summary>
@@ -62,17 +55,7 @@ namespace Advanced.DefiningClasses.Person
         /// <returns>List of Person objects</returns>
         public List<Person> GetMembersOverThirty()
         {
-            var membersOverThirty = new List<Person>();
-
-            foreach (var member in this.Members)
-            {
-                if (member.Age >= 30)
-                {
-                    membersOverThirty.Add(member);
-                }
-            }
-
-            return membersOverThirty;
+            return this.members.Where(x => x.Age >= 30).OrderBy(y => y.Name).ToList();
         }
     }
 }

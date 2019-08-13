@@ -70,7 +70,7 @@ namespace Advanced
             // DefiningClasses.Person.StartUp.Execute();
             // DefiningClasses.DateModifier.StartUp.Execute();
             // DefiningClasses.CompanyRoster.StartUp.Execute();
-            DefiningClasses.SpeedRacing.StartUp.Execute();
+            // DefiningClasses.SpeedRacing.StartUp.Execute();
         }
     }
 }
