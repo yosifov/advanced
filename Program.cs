@@ -71,6 +71,7 @@ namespace Advanced
             // DefiningClasses.DateModifier.StartUp.Execute();
             // DefiningClasses.CompanyRoster.StartUp.Execute();
             // DefiningClasses.SpeedRacing.StartUp.Execute();
+            DefiningClasses.PokemonTrainer.StartUp.Execute();
         }
     }
 }
