@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
     public class StartUp
     {
@@ -48,16 +47,17 @@
                         ReduceHealth(trainer.Pokemons);
                     }
                 }
+
                 input = Console.ReadLine();
             }
 
-            foreach (var trainer in trainers.OrderByDescending(x=>x.BadgesCount))
+            foreach (var trainer in trainers.OrderByDescending(x => x.BadgesCount))
             {
                 Console.WriteLine(trainer.ToString());
             }
         }
 
-        static void ReduceHealth(List<Pokemon> pokemons)
+        public static void ReduceHealth(List<Pokemon> pokemons)
         {
             for (int i = 0; i < pokemons.Count; i++)
             {
