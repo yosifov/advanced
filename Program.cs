@@ -72,9 +72,9 @@ namespace Advanced
             // DefiningClasses.CompanyRoster.StartUp.Execute();
             // DefiningClasses.SpeedRacing.StartUp.Execute();
             // DefiningClasses.PokemonTrainer.StartUp.Execute();
-            // Generics.Box.StartUp.Execute();
             // Generics.GenericArrayCreator.StartUp.Execute();
-            Generics.GenericScale.StartUp.Execute();
+            // Generics.GenericScale.StartUp.Execute();
+            Generics.Box.StartUp.Execute();
         }
     }
 }

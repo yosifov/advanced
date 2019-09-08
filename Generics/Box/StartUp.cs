@@ -6,14 +6,14 @@
     {
         public static void Execute()
         {
-            var box = new Box<int>();
-            box.Add(1);
-            box.Add(2);
-            box.Add(3);
-            Console.WriteLine(box.Remove());
-            box.Add(4);
-            box.Add(5);
-            Console.WriteLine(box.Remove());
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                var currentElement = Console.ReadLine();
+                var currentBox = new BoxOfString<string>(currentElement);
+                Console.WriteLine(currentBox.ToString());
+            }
         }
     }
 }
