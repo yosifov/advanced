@@ -5,26 +5,26 @@
 
     public class Box<T>
     {
+        private List<T> elements;
+
         public Box()
         {
-            this.Elements = new List<T>();
+            this.elements = new List<T>();
             this.Count = 0;
         }
 
         public int Count { get; private set; }
 
-        public List<T> Elements { get; set; }
-
         public void Add(T element)
         {
-            this.Elements.Add(element);
+            this.elements.Add(element);
             this.Count++;
         }
 
         public T Remove()
         {
-            var last = this.Elements.Last();
-            this.Elements.RemoveAt(this.Count - 1);
+            var last = this.elements.Last();
+            this.elements.RemoveAt(this.Count - 1);
             this.Count--;
             return last;
         }
