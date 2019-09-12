@@ -1,6 +1,8 @@
 ﻿namespace Advanced.IteratorsAndComparators
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class StartUp
     {
@@ -11,11 +13,15 @@
             Book bookThree = new Book("The Documents in the Case", 1930);
 
             Library libraryOne = new Library();
-            Library libraryTwo = new Library(bookOne, bookTwo, bookThree);
+
+            SortedSet<Book> libraryTwo = new SortedSet<Book>
+            {
+                bookOne, bookTwo, bookThree
+            };
 
             foreach (Book book in libraryTwo)
             {
-                Console.WriteLine(book.Title);
+                Console.WriteLine(book);
             }
         }
     }
