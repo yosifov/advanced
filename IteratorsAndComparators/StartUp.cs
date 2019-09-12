@@ -14,9 +14,11 @@
 
             Library libraryOne = new Library();
 
-            SortedSet<Book> libraryTwo = new SortedSet<Book>
+            SortedSet<Book> libraryTwo = new SortedSet<Book>(new BookComparator())
             {
-                bookOne, bookTwo, bookThree
+                bookOne,
+                bookTwo,
+                bookThree
             };
 
             foreach (Book book in libraryTwo)
