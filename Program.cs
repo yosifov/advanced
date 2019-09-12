@@ -74,7 +74,8 @@ namespace Advanced
             // DefiningClasses.PokemonTrainer.StartUp.Execute();
             // Generics.GenericArrayCreator.StartUp.Execute();
             // Generics.GenericScale.StartUp.Execute();
-            Generics.Box.StartUp.Execute();
+            // Generics.Box.StartUp.Execute();
+            IteratorsAndComparators.StartUp.Execute();
         }
     }
 }
