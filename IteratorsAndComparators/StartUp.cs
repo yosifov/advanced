@@ -1,6 +1,7 @@
 ﻿namespace Advanced.IteratorsAndComparators
 {
     using System;
+    using System.Linq;
 
     public class StartUp
     {
@@ -26,56 +27,90 @@
             // }
 
             // ListyIterator Exercise
+
+            // var input = Console.ReadLine();
+
+            // var commands = input.Split();
+
+            // ListyIterator<string> listy;
+
+            // if (commands.Length <= 1)
+            // {
+            //     listy = new ListyIterator<string>();
+            // }
+            // else
+            // {
+            //     var elements = new string[commands.Length - 1];
+            //     for (int i = 0; i < elements.Length; i++)
+            //     {
+            //         elements[i] = commands[i + 1];
+            //     }
+            //     listy = new ListyIterator<string>(elements);
+            // }
+
+            // input = Console.ReadLine();
+
+            // while (input != "END")
+            // {
+            //     switch (input)
+            //     {
+            //         case "HasNext":
+            //             Console.WriteLine(listy.HasNext());
+            //             break;
+            //         case "Print":
+            //             Console.WriteLine(listy.Print());
+            //             break;
+            //         case "Move":
+            //             Console.WriteLine(listy.Move());
+            //             break;
+            //         case "PrintAll":
+            //             Console.WriteLine(listy.PrintAll());
+            //             break;
+            //         default:
+            //             break;
+            //     }
+            //     input = Console.ReadLine();
+            // }
+
+            // Stack Exercise
+            var myStack = new MyStack<int>();
+
             var input = Console.ReadLine();
-
-            var commands = input.Split();
-
-            ListyIterator<string> listy;
-
-            if (commands.Length <= 1)
-            {
-                listy = new ListyIterator<string>();
-            }
-            else
-            {
-                var elements = new string[commands.Length - 1];
-                for (int i = 0; i < elements.Length; i++)
-                {
-                    elements[i] = commands[i + 1];
-                }
-
-                listy = new ListyIterator<string>(elements);
-            }
-
-            input = Console.ReadLine();
-
             while (input != "END")
             {
-                switch (input)
+                if (input.Contains("Push"))
                 {
-                    case "HasNext":
-                        Console.WriteLine(listy.HasNext());
-                        break;
-                    case "Print":
-                        Console.WriteLine(listy.Print());
-                        break;
-                    case "Move":
-                        Console.WriteLine(listy.Move());
-                        break;
-                    case "PrintAll":
-                        Console.WriteLine(listy.PrintAll());
-                        break;
-                    default:
-                        break;
+                    var elements = input
+                        .Substring(5, input.Length - 5)
+                        .Split(", ")
+                        .Select(int.Parse)
+                        .ToArray();
+
+                    myStack.Push(elements);
+                }
+                else
+                {
+                    myStack.Pop();
                 }
 
                 input = Console.ReadLine();
             }
+
+            PrintMyStack(myStack);
+            PrintMyStack(myStack);
         }
 
         public static ListyIterator<T> Create<T>(params T[] elements)
         {
             return new ListyIterator<T>(elements);
+        }
+
+        public static void PrintMyStack<T>(MyStack<T> myStack)
+        {
+            foreach (var element in myStack)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }

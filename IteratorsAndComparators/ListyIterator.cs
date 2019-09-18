@@ -70,6 +70,6 @@
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-            => GetEnumerator();
+            => this.GetEnumerator();
     }
 }
