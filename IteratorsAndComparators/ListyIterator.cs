@@ -1,8 +1,9 @@
 ﻿namespace Advanced.IteratorsAndComparators
 {
+    using System.Collections;
     using System.Collections.Generic;
 
-    public class ListyIterator<T>
+    public class ListyIterator<T> : IEnumerable<T>
     {
         private List<T> elements;
         private int currentIndex;
@@ -50,9 +51,25 @@
             }
         }
 
+        public string PrintAll()
+        {
+            return string.Join(" ", this.elements);
+        }
+
         public void Add(T element)
         {
             this.elements.Add(element);
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < this.elements.Count; i++)
+            {
+                yield return this.elements[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+            => GetEnumerator();
     }
 }

@@ -62,6 +62,9 @@
                     case "Move":
                         Console.WriteLine(listy.Move());
                         break;
+                    case "PrintAll":
+                        Console.WriteLine(listy.PrintAll());
+                        break;
                     default:
                         break;
                 }
